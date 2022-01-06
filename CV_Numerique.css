@@ -7,6 +7,15 @@ body {
 
 .menuItem:hover, .menu:active { color: #02cc0c; }
 
+#langageIcone {
+	width: 40px;
+	height: 40px;
+	margin-left: 10px;
+	border: 1px solid black;
+	border-radius: 20px;
+	cursor: pointer;
+}
+
 .title {
 	font-weight: bold;
 	font-size: 35px;
@@ -40,27 +49,27 @@ body {
 
 .orientedDiv1 {
 	transform: rotate(-0.6deg) translateY(-45px) translateX(-1px);
-	box-shadow: -10px 12px 12px rgba(0,0,0,0.60);
+	box-shadow: -10px 20px 12px rgba(0,0,0,0.60);
 }
 
 .orientedDiv2 {
 	transform: rotate(-0.6deg) translateY(45px) translateX(-1px);
-	box-shadow: -10px -12px 12px rgba(0,0,0,0.60);
+	box-shadow: -10px -20px 12px rgba(0,0,0,0.60);
 }
 
 .orientedDiv3 {
 	transform: rotate(0.6deg) translateY(-45px) translateX(-1px);
-	box-shadow: -10px 12px 12px rgba(0,0,0,0.60);
+	box-shadow: -10px 20px 12px rgba(0,0,0,0.60);
 }
 
 .orientedDiv4 {
 	transform: rotate(0.6deg) translateY(45px) translateX(-1px);
-	box-shadow: -10px -12px 12px rgba(0,0,0,0.60);
+	box-shadow: -10px -20px 12px rgba(0,0,0,0.60);
 }
 
 #bonjour {
 	font-size: 50px;
-	color: #02cc0c;
+	color: #05a300;
 	margin-bottom: 10px;
 }
 
@@ -69,12 +78,7 @@ body {
 	margin-bottom: 10px;
 }
 
-#formation {
-	background-image: url("./PourCV.png");
-	color: white;
-}
-
-#realisations {
+#formation, #realisations {
 	background-image: url("./PourCV.png");
 	color: white;
 }
@@ -86,8 +90,17 @@ body {
 	color: white;
 }
 
+.contactLine {
+	text-align: center;
+	padding: 0 5px 0 5px;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .formationAnimation { animation: formationAnimation 3s 1; }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .realisationAnimation { animation: realisationAnimation 3s 1; }
 }
 
 @keyframes formationAnimation {
@@ -95,18 +108,19 @@ body {
 	to { opacity: 100%; }
 }
 
-.formationYears {
-	font-size: 17px;
+@keyframes realisationAnimation {
+	from { opacity: 0%; }
+	to { opacity: 100%; }
 }
+
+.formationYears { font-size: 17px; }
 
 .formationTitle {
 	font-weight:  bold;
 	font-size: 24px;
 }
 
-.formationLabel {
-	font-weight: bold;
-}
+.formationLabel { font-weight: bold; }
 
 .formationText { margin: 10px 0 10px 0; }
 
@@ -171,40 +185,13 @@ body {
 .realisationTitle {
 	font-size: 24px;
 	font-weight: bold;
-	margin-bottom: 15px;
-}
-
-.realisationLabel {
-	font-weight: italic;
 	margin-bottom: 10px;
 }
 
-.langue { font-weight: bold; }
-
-.langueFlag {
-	width: 40px;
-	height: 25px;
-	margin-right: 5px;
-	padding-top: 5px;
+.realisationLabel {
+	font-style: italic;
+	margin-bottom: 10px;
 }
-
-.langueNiveau { color:#aaa9ad; }
-
-@keyframes EnTextColor {
-	0% { color:#012169; }
-	50% { color:#C8102E; }
-	100% { color:#012169; }
-}
-
-@keyframes SpTextColor {
-	0% { color:#AA151B; }
-	50% { color:#F1BF00; }
-	100% { color:#AA151B; }
-}
-
-#langueAnglais:hover { animation: EnTextColor 2s infinite; }
-
-#langueEspagnol:hover { animation: SpTextColor 2s infinite; }
 
 .loisirLabel { margin-top: 10px; }
 
